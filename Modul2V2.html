@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Kontaktformular</title>
+<style>
+ 	body {
+   	font-family: Arial, sans-serif;
+   	background-color: #f4f4f4;
+   	display: flex;
+   	justify-content: center;
+   	align-items: center;
+   	height: 100vh;
+   	margin: 0;
+ 	}
+ 	.form-container {
+   	background-color: #fff;
+   	padding: 30px;
+   	border-radius: 8px;
+   	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   	width: 100%;
+   	max-width: 400px;
+   	position: relative;
+ 	}
+ 	label {
+   	display: block;
+   	margin-top: 10px;
+ 	}
+ 	input, textarea {
+   	width: 100%;
+   	padding: 8px;
+   	margin-top: 5px;
+   	border: 1px solid #ccc;
+   	border-radius: 4px;
+   	box-sizing: border-box;
+ 	}
+ 	.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .button-row button {
+    flex: 1;
+    padding: 10px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .button-row button[type="submit"] {
+    background-color: #4CAF50;
+  }
+
+  .button-row button[type="reset"] {
+    background-color: #f44336;
+  }
+
+	.notification {
+   	display: none;
+   	position: absolute;
+   	top: 15px;
+   	left: 50%;
+   	transform: translateX(-50%);
+   	background-color: #4CAF50;
+   	color: white;
+   	padding: 10px 20px;
+   	border-radius: 6px;
+   	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+   	z-index: 1;
+   	animation: fadeInOut 4s ease;
+ 	}
+
+	@keyframes fadeInOut {
+   	0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+   	10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+   	90% { opacity: 1; }
+   	100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+ 	}
+</style>
+</head>
+<body>
+<div class="form-container">
+  <div id="notif" class="notification">Das Formular wurde erfolgreich gesendet!</div>
+  <h2>Kontaktieren Sie mich</h2>
+
+  <form id="contactForm">
+    <label for="name">Vor- und Nachname:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">E-Mail-Adresse:</label>
+    <input type="email" id="email" name="email" required
+           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+           title="Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. e.mueller@example.com">
+
+    <label for="message">Nachricht:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <div class="button-row">
+      <button type="submit">Senden</button>
+      <button type="reset">Zurücksetzen</button>
+    </div>
+  </form>
+</div>
+
+<script>
+	const form = document.getElementById('contactForm');
+	const notif = document.getElementById('notif');
+
+	form.addEventListener('submit', function(e) {
+  	e.preventDefault();
+  	const confirmed = confirm('Möchten Sie die Nachricht wirklich senden?');
+  	if (confirmed) {
+    	notif.style.display = 'block';
+    	form.reset();
+
+    	setTimeout(() => {
+      	notif.style.display = 'none';
+    	}, 4000);
+  	}
+	});
+</script>
+</body>
+</html>
