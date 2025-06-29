@@ -1,6 +1,17 @@
 
 <html lang="de">
 <head>
+
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7YP7NL7CV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E7YP7NL7CV');
+</script>
+
 <meta charset="UTF-8">
 <title>Kontaktformular</title>
 <style>
@@ -125,13 +136,3 @@
 </script>
 </body>
 </html>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7YP7NL7CV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E7YP7NL7CV');
-</script>
