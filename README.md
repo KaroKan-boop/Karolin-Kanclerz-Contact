@@ -136,5 +136,18 @@
   	}
 	});
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form");
+    if (form) {
+      form.addEventListener("submit", () => {
+        gtag('event', 'submit', {
+          'event_category': 'Formularz Kontaktowy',
+          'event_label': 'Wysłanie formularza'
+        });
+      });
+    }
+  });
+</script>
 </body>
 </html>
