@@ -1,7 +1,9 @@
 
 <html lang="de">
 <head>
-
+ <meta charset="UTF-8">
+  <title>Kontakt</title>
+  <!-- ... inne meta / linki ... -->
  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7YP7NL7CV"></script>
 <script>
