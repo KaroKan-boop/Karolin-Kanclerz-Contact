@@ -102,7 +102,7 @@
   <div id="notif" class="notification">Das Formular wurde erfolgreich gesendet!</div>
   <h2>Kontaktieren Sie mich</h2>
 
-  <form method="POST" action="http://127.0.0.1:5000/submit">
+  <form id="contactForm" method="POST" action="http://127.0.0.1:5000/submit">
     <label for="name">Vor- und Nachname:</label>
     <input type="text" id="name" name="name" required>
 
