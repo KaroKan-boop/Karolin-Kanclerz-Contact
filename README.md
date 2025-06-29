@@ -13,7 +13,7 @@
 
   gtag('config', 'G-E7YP7NL7CV');
 </script>
-
+</head>
 <meta charset="UTF-8">
 <title>Kontaktformular</title>
 <style>
