@@ -127,6 +127,14 @@
 
 	form.addEventListener('submit', function(e) {
   	e.preventDefault();
+	fetch(form.action, {
+		method: 'POST',
+		body: new FormData(form)
+	}).then(response => {
+		if (response.ok) {
+			console.log("Wysłano!");
+		}
+	}
   	const confirmed = confirm('Möchten Sie die Nachricht wirklich senden?');
   	if (confirmed) {
     	notif.style.display = 'block';
