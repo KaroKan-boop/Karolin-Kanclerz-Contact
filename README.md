@@ -102,7 +102,7 @@
   <div id="notif" class="notification">Das Formular wurde erfolgreich gesendet!</div>
   <h2>Kontaktieren Sie mich</h2>
 
-  <form method="POST" action="https://fancy-owl.ngrok.io/submit">
+  <form method="POST" action=" https://market-universe-migration-mind.trycloudflare.com">
     <label for="name">Vor- und Nachname:</label>
     <input type="text" id="name" name="name" required>
 
